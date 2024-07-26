@@ -45,8 +45,9 @@ const clearAll = () => {
 
 
 const calculate = () => {
-    firstNumberSpan.innerText = "";
-    operatorSpan.innerText = "";
+    if (firstNumber.length === 0 || secondNumber.length === 0) {
+        return;
+    }
     let result;
     switch (operator){
         case "+":
@@ -111,4 +112,4 @@ multiplyOperatorBtn.addEventListener("click", ()=>assignOperator("x"));
 divisionOperatorBtn.addEventListener("click", ()=>assignOperator("/"));
 
 calculateBtn.addEventListener("click", ()=>calculate());
-clearBtn.addEventListener("clicl", ()=>clearAll());
+clearBtn.addEventListener("click", ()=>clearAll());
