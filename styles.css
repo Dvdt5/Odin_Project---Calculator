@@ -17,18 +17,19 @@ body {
 }
 
 #screen-container {
-    font-size: 36px;
+    font-size: 30px;
     width: 90%;
-    height: 10vh;
+    height: 14vh;
     border: 5px solid black;
     margin: auto;
     margin-top: 3vh;
     padding-top: 20px;
-    padding-right: 5px;
+    padding-right: 10px;
     text-align: right;
     align-items: center;
     color: chartreuse;
     background-color: green;
+    overflow: hidden;
 }
 
 #button-container {
@@ -57,7 +58,7 @@ body {
     padding: 10px;
     font-size: 36px;
     text-align: center;
-    background-color: white;
+    background-color: whitesmoke;
     cursor: pointer;
 }
 
