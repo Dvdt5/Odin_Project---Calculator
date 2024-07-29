@@ -3,6 +3,7 @@ const secondNumberSpan = document.getElementById("second-number");
 const operatorSpan = document.getElementById("operator");
 const calculateBtn = document.getElementById("calculate-btn");
 const clearBtn = document.getElementById("clear-btn")
+const floatBtn = document.getElementById("float-btn");
 
 const number0Btn = document.getElementById("number-0");
 const number1Btn = document.getElementById("number-1");
