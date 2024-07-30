@@ -5,6 +5,7 @@ const calculateBtn = document.getElementById("calculate-btn");
 const clearBtn = document.getElementById("clear-btn")
 const floatBtn = document.getElementById("float-btn");
 
+
 const number0Btn = document.getElementById("number-0");
 const number1Btn = document.getElementById("number-1");
 const number2Btn = document.getElementById("number-2");
@@ -96,6 +97,23 @@ const enterNumber = (number) => {
     displayChanges();
 }
 
+const makeFloat = () => {
+    if (!operator) {
+        if (firstNumber.length === 12 ){return;}
+        if (firstNumber.includes(".")){return;}
+        if (firstNumber.length === 0){return;}
+        firstNumber.push(".");
+    } 
+    else {
+        if (secondNumber.length === 12){return;}
+        if (secondNumber.includes(".")){return;}
+        if (secondNumber.length === 0){return;}
+        secondNumber.push(".");
+    }
+
+    displayChanges();
+}
+
 number0Btn.addEventListener("click",()=>enterNumber("0"));
 number1Btn.addEventListener("click",()=>enterNumber("1"));
 number2Btn.addEventListener("click",()=>enterNumber("2"));
@@ -106,6 +124,7 @@ number6Btn.addEventListener("click",()=>enterNumber("6"));
 number7Btn.addEventListener("click",()=>enterNumber("7"));
 number8Btn.addEventListener("click",()=>enterNumber("8"));
 number9Btn.addEventListener("click",()=>enterNumber("9"));
+floatBtn.addEventListener("click", ()=>makeFloat())
 
 sumOperatorBtn.addEventListener("click", ()=>assignOperator("+"));
 subtractOperatorBtn.addEventListener("click", ()=>assignOperator("-"));
